@@ -15,7 +15,8 @@
   display: block;
   background-color: #2c3743;
   color: white;
-  flex-grow: 2;
+  width: 260px; /* Adjust the width as needed */
+  height: 400px; /* Adjust the height as needed */
 
   h3,
   p {
@@ -24,7 +25,8 @@
   }
 
   img {
-    height: 150px;
-    width: 100%;
+    width: 260px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    object-fit: cover; /* Scale and crop the image to fit the container */
   }
 }
