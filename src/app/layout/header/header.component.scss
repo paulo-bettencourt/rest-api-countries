@@ -1,11 +1,26 @@
 .container {
   background-color: #2c3743 !important;
-}
-header {
-  background-color: #2c3743;
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  margin: auto;
-  padding: 2% 0;
+
+  header {
+    background-color: #2c3743;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    padding: 2% 0;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  .dark-mode {
+    display: flex;
+    width: 15%;
+    justify-content: right;
+
+    svg {
+      padding-right: 10%;
+    }
+  }
 }
