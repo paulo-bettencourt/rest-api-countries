@@ -1,15 +1,17 @@
-<div class="country-container">
-  <div
-    *ngFor="let country of arrayCountries"
-    class="individual-country-container"
-  >
-    <img
-      src="{{ country.flags.png }}"
-      alt=""
+<div class="container">
+  <div class="country-container">
+    <div
+      *ngFor="let country of arrayCountries"
+      class="individual-country-container"
     >
-    <h3>{{country.name.common}}</h3>
-    <p>Region: {{ country.population }}</p>
-    <p>Region: {{ country.region }}</p>
-    <p>Capital: {{ country.capital }}</p>
+      <img
+        src="{{ country.flags.png }}"
+        alt=""
+      >
+      <h3>{{country.name.common}}</h3>
+      <p>Region: {{ country.population }}</p>
+      <p>Region: {{ country.region }}</p>
+      <p>Capital: {{ country.capital }}</p>
+    </div>
   </div>
 </div>

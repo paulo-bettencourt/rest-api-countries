@@ -1,18 +1,11 @@
+.container {
+  background-color: #2c3743 !important;
+}
 header {
   background-color: #2c3743;
   display: flex;
   justify-content: space-between;
-
-  div {
-    padding: 1%;
-    color: white;
-
-    &:first-child {
-      margin-left: 3%;
-    }
-
-    &:nth-child(2) {
-      margin-right: 3%;
-    }
-  }
+  width: 90%;
+  margin: auto;
+  padding: 2% 0;
 }
