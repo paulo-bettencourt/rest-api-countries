@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApiService } from 'src/app/api.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Country } from 'src/app/models/country';
 
 @Component({
   selector: 'rest-api-countries-index',
@@ -12,11 +13,11 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   providers: [ApiService],
 })
 export class IndexComponent {
-  arrayCountries: any;
+  arrayCountries: Country[] = [];
 
   constructor(private apiService: ApiService) {
-    this.apiService.getConfig().subscribe({
-      next: (data: any) => (this.arrayCountries = data),
+    this.apiService.getCountries().subscribe({
+      next: (countries: Country[]) => (this.arrayCountries = countries),
     });
   }
 }
