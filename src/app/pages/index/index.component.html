@@ -1,7 +1,36 @@
 <div class="container">
+  <div class="search-container">
+    <div class="container-input">
+      <input
+        type="text"
+        placeholder="Filter by city"
+        id="searchInput"
+        #filter
+      >
+      <button
+        class="primary"
+        type="button"
+        (click)="filterResults(filter.value)"
+      >Search</button>
+    </div>
+    <select
+      name="pets"
+      id="pet-select"
+    >
+      <option value="">Filter by Region</option>
+      <option value="africa">Africa</option>
+      <option value="america">America</option>
+      <option value="asia">Asia</option>
+      <option value="europe">Europe</option>
+      <option value="oceania">Oceania</option>
+    </select>
+  </div>
+</div>
+
+<div class="container">
   <div class="country-container">
     <div
-      *ngFor="let country of arrayCountries"
+      *ngFor="let country of filteredArrayCountries"
       class="individual-country-container"
     >
       <img

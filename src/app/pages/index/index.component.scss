@@ -30,3 +30,40 @@
     object-fit: cover; /* Scale and crop the image to fit the container */
   }
 }
+
+// SEARCH
+
+.container {
+  background-color: #2c3743;
+
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding: 5% auto;
+    margin: auto;
+
+    .container-input {
+      width: 60%;
+
+      #searchInput {
+        background-color: #2c3743;
+        color: white;
+        padding: 3% 10%;
+        width: 40%;
+      }
+
+      button {
+        background-color: #2c3743;
+        color: white;
+        padding: 3% 10%;
+      }
+    }
+
+    select {
+      background-color: #2c3743;
+      color: white;
+      padding: 1% 3%;
+    }
+  }
+}

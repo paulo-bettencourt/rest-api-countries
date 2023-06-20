@@ -14,10 +14,25 @@ import { Country } from 'src/app/models/country';
 })
 export class IndexComponent {
   arrayCountries: Country[] = [];
+  filteredArrayCountries: any;
 
   constructor(private apiService: ApiService) {
     this.apiService.getCountries().subscribe({
-      next: (countries: Country[]) => (this.arrayCountries = countries),
+      next: (countries: Country[]) => {
+        (this.arrayCountries = countries),
+          (this.filteredArrayCountries = this.arrayCountries);
+      },
     });
+  }
+
+  filterResults(text: string) {
+    if (!text) {
+      this.filteredArrayCountries = this.arrayCountries;
+      return;
+    }
+
+    this.filteredArrayCountries = this.arrayCountries.filter((country) =>
+      country?.name.common.toLowerCase().includes(text.toLowerCase())
+    );
   }
 }
