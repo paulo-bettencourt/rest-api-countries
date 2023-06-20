@@ -1,8 +1,9 @@
+<hr>
 <div class="container">
   <div class="search-container">
-
     <input
-      type="text"
+      [value]="inputCountry"
+      (input)="inputCountry=getCountryInput($event)"
       placeholder="Search for a country..."
     >
     <select

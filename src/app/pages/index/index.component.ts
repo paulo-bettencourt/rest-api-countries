@@ -13,7 +13,6 @@ import { Country } from 'src/app/models/country';
   providers: [ApiService],
 })
 export class IndexComponent {
-  arrayCountries: Country[] = [];
   countries: Signal<Country[] | undefined>;
 
   constructor(private apiService: ApiService) {

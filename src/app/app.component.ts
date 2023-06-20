@@ -4,6 +4,7 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { SearchComponent } from './pages/search/search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   standalone: true,
@@ -16,6 +17,7 @@ import { SearchComponent } from './pages/search/search.component';
     FooterComponent,
     HeaderComponent,
     SearchComponent,
+    HttpClientModule,
   ],
 })
 export class AppComponent {
